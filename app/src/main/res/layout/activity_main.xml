@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0E0E0">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Top Title -->
+        <TextView
+            android:id="@+id/topTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option #1: Unit Converter Testing"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <!-- Existing Views -->
+        <TextView
+            android:id="@+id/conversionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Conversion Type"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/topTitle"
+            android:layout_marginTop="150dp"
+            android:layout_centerHorizontal="true"/>
+
+        <Spinner
+            android:id="@+id/conversionSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/conversionLabel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/conversionSpinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:hint="Input Value"
+            android:inputType="numberDecimal"/>
+
+        <Button
+            android:id="@+id/convertButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Convert"
+            android:textColor="@color/black"
+            android:elevation="4dp"
+            android:backgroundTint="#00FF00" />
+
+        <TextView
+            android:id="@+id/resultLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result"
+            android:textStyle="bold"
+            android:layout_below="@id/convertButton"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resultLabel"
+            android:layout_marginTop="8dp"
+            android:textSize="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="#87CEEB"/>
+
+        <!-- TextViews for Units -->
+        <TextView
+            android:id="@+id/fahrenheitLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit"
+            android:layout_below="@id/resultText"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/feetLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feet"
+            android:layout_below="@id/fahrenheitLabel"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/poundsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pounds"
+            android:layout_below="@id/feetLabel"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</ScrollView>
